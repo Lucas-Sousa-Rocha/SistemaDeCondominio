@@ -26,10 +26,7 @@ abstract class Usuario implements Autenticavel {
     }
 
 	public Object getNumeroApartamento() {
-		// TODO Auto-generated method stub
+		
 		return null;
-	}
-
-	//protected abstract Object getNumeroApartamento();
-    
+	}    
 }

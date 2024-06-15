@@ -1,17 +1,13 @@
 package SRC;
-
 import java.util.ArrayList;
-
 class Funcionario extends Usuario {
 	public Funcionario(String nome, String endereco, String contato, String senha) {
 		super(nome, endereco, contato, senha);
 	}
-
 	@Override
 	public boolean autenticar(String senha) {
 		return this.senha.equals(senha);
 	}
-
 	public void menuFuncionario() {
 		boolean continuar = true;
 		while (continuar) {
@@ -23,14 +19,12 @@ class Funcionario extends Usuario {
 			System.out.print("Escolha uma opção: ");
 			int opcao = SistemaCondominio.scanner.nextInt();
 			SistemaCondominio.scanner.nextLine(); // Limpa o buffer
-
 			switch (opcao) {
 			case 1:
 				verificarDespesasPorMorador(SistemaCondominio.debitos);
 				break;
 			case 2:
 				SistemaCondominio.visualizarReclamacoesESolicitacoes();
-				/*visualizarReclamacoesESolicitacoes(SistemaCondominio.solicitacoes);*/
 				break;
 			case 3:
 				SistemaCondominio.buscaMorador();
@@ -43,9 +37,6 @@ class Funcionario extends Usuario {
 			}
 		}
 	}
-
-	
-
 	public void verificarDespesasPorMorador(ArrayList<Debito> debitos) {
 		System.out.print("Número do Apartamento: ");
 		String numeroApartamento = SistemaCondominio.scanner.nextLine();
@@ -58,5 +49,4 @@ class Funcionario extends Usuario {
 		}
 		System.out.println("Total a ser pago pelo apartamento " + numeroApartamento + ": R$ " + total);
 	}
-	
 }

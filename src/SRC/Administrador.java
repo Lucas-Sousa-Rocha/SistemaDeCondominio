@@ -18,7 +18,6 @@ class Administrador extends Usuario {
 			System.out.println("2. Registrar Débito");
 			System.out.println("3. Visualizar Débitos por Apartamento");
 			System.out.println("4. Calcular Valor Total por Morador");
-			// System.out.println("5. Criar Novo Usuário");
 			System.out.println("5. Logout");
 			System.out.print("Escolha uma opção: ");
 			int opcao = SistemaCondominio.scanner.nextInt();
